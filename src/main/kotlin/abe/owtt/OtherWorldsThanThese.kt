@@ -13,14 +13,13 @@ const val MOD_ID = "owtt"
 object OtherWorldsThanThese : ModInitializer {
     private val logger = LoggerFactory.getLogger("owtt")
 
-	private val DEV_WAND = Item(FabricItemSettings().maxCount(1))
+	// Register items
+	private val DEV_WAND =  Registry.register(Registries.ITEM, Identifier(MOD_ID, "dev_wand"), Item(FabricItemSettings().maxCount(1)))
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		logger.info("Hello Fabric world!")
-
-		Registry.register(Registries.ITEM, Identifier(MOD_ID, "dev_wand"), DEV_WAND)
 	}
 }
