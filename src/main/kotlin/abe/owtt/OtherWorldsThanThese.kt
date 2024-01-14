@@ -4,7 +4,7 @@ import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
 object OtherWorldsThanThese : ModInitializer {
-    private val logger = LoggerFactory.getLogger("other-worlds-than-these")
+    private val logger = LoggerFactory.getLogger("other_worlds")
 
 	override fun onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "other-worlds-than-these",
+	"id": "other_worlds",
 	"version": "${version}",
 	"name": "Other Worlds Than These",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/other-worlds-than-these/icon.png",
+	"icon": "assets/other_worlds/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -35,9 +35,9 @@
 		]
 	},
 	"mixins": [
-		"other-worlds-than-these.mixins.json",
+		"other_worlds.mixins.json",
 		{
-			"config": "other-worlds-than-these.client.mixins.json",
+			"config": "other_worlds.client.mixins.json",
 			"environment": "client"
 		}
 	],
