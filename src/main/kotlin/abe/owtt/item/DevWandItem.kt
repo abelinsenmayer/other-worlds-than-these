@@ -19,10 +19,10 @@ class DevWandItem : Item(FabricItemSettings().maxCount(1)) {
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
         if (!world!!.isClient) {
             val teleportTarget = TeleportTarget(user!!.pos, user.velocity, user.yaw, user.pitch)
-            val targetWorld : ServerWorld = if (world == Dimensions.DIM1_DIMENSION) {
-                Dimensions.OVERWORLD_DIMENSION
+            val targetWorld : ServerWorld = if (world == Dimensions.DIM1) {
+                Dimensions.OVERWORLD
             } else {
-                Dimensions.DIM1_DIMENSION
+                Dimensions.DIM1
             }
             FabricDimensions.teleport(user, targetWorld, teleportTarget)
         }

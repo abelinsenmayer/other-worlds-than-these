@@ -10,13 +10,13 @@ import net.minecraft.world.World
 private val DIM1_TYPE_KEY: RegistryKey<World> = RegistryKey.of(RegistryKeys.WORLD, id("dim1"))
 
 object Dimensions {
-    lateinit var DIM1_DIMENSION : ServerWorld
-    lateinit var OVERWORLD_DIMENSION : ServerWorld
+    lateinit var DIM1 : ServerWorld
+    lateinit var OVERWORLD : ServerWorld
 
     fun init() {
         ServerLifecycleEvents.SERVER_STARTED.register { server ->
-            DIM1_DIMENSION = server.getWorld(DIM1_TYPE_KEY)!!
-            OVERWORLD_DIMENSION = server.getWorld(World.OVERWORLD)!!
+            DIM1 = server.getWorld(DIM1_TYPE_KEY)!!
+            OVERWORLD = server.getWorld(World.OVERWORLD)!!
         }
     }
 }
