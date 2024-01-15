@@ -1,4 +1,4 @@
-package abe.owtt
+package abe.owtt.dimension
 
 import abe.owtt.OtherWorldsThanThese.id
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents

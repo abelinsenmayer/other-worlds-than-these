@@ -1,5 +1,6 @@
 package abe.owtt
 
+import abe.owtt.dimension.Dimensions
 import abe.owtt.item.DevWandItem
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents

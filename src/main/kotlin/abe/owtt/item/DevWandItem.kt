@@ -1,6 +1,6 @@
 package abe.owtt.item
 
-import abe.owtt.Dimensions
+import abe.owtt.dimension.Dimensions
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.player.PlayerEntity
