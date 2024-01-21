@@ -3,7 +3,7 @@
 	"id": "owtt",
 	"version": "${version}",
 	"name": "Other Worlds Than These",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod by Abe Linsenmayer that adds dimension-related features to Minecraft.",
 	"authors": [
 		"Me!"
 	],
@@ -32,6 +32,9 @@
 				"value": "abe.owtt.OtherWorldsThanTheseDataGenerator",
 				"adapter": "kotlin"
 			}
+		],
+		"cardinal-components": [
+			"abe.owtt.component.OwttComponents"
 		]
 	},
 	"mixins": [
@@ -50,5 +53,10 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"owtt:cosmic_alignment"
+		]
 	}
 }
