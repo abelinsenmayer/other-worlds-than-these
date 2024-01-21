@@ -1,6 +1,7 @@
 package abe.owtt.component
 
 import dev.onyxstudios.cca.api.v3.component.ComponentV3
+import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent
 import net.minecraft.nbt.NbtCompound
 
 interface IntComponent : ComponentV3 {
