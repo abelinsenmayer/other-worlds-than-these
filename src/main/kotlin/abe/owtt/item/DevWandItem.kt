@@ -15,6 +15,9 @@ class DevWandItem : Item(FabricItemSettings().maxCount(1)) {
     private val logger = LogManager.getLogger(DevWandItem::class.java)
 
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
+        if (world!!.isClient) {
+            return TypedActionResult.pass(user!!.getStackInHand(hand))
+        }
 //        if (!world!!.isClient) {
 //            val teleportTarget = TeleportTarget(user!!.pos, user.velocity, user.yaw, user.pitch)
 //            val targetWorld : ServerWorld = if (world == Dimensions.DIM1) {
@@ -25,7 +28,7 @@ class DevWandItem : Item(FabricItemSettings().maxCount(1)) {
 //            FabricDimensions.teleport(user, targetWorld, teleportTarget)
 //        }
 
-        user!!.sendMessage(Text.of("Current alignment: ${world!!.alignment()}"), true)
+        user!!.sendMessage(Text.of("Current alignment: ${world.alignment()}"), true)
 
         return TypedActionResult.success(user.getStackInHand(hand))
     }

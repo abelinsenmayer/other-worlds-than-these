@@ -1,6 +1,7 @@
 package abe.owtt.component
 
 import abe.owtt.OtherWorldsThanThese
+import abe.owtt.dimension.getAlignmentChangeRate
 import abe.owtt.dimension.getInitialAlignment
 import abe.owtt.makeLogger
 import dev.onyxstudios.cca.api.v3.component.ComponentKey
@@ -14,7 +15,9 @@ class OwttComponents : WorldComponentInitializer {
     private val logger = makeLogger(this)
 
     override fun registerWorldComponentFactories(registry: WorldComponentFactoryRegistry) {
-        registry.register(COSMIC_ALIGNMENT) { world -> CosmicAlignmentComponent(getInitialAlignment(world)) }
+        registry.register(COSMIC_ALIGNMENT) { world ->
+            CosmicAlignmentComponent(getInitialAlignment(world), getAlignmentChangeRate(world))
+        }
         logger.trace("Initializing cosmic alignment component")
     }
 }
