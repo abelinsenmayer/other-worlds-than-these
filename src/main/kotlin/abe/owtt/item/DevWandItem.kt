@@ -18,15 +18,6 @@ class DevWandItem : Item(FabricItemSettings().maxCount(1)) {
         if (world!!.isClient) {
             return TypedActionResult.pass(user!!.getStackInHand(hand))
         }
-//        if (!world!!.isClient) {
-//            val teleportTarget = TeleportTarget(user!!.pos, user.velocity, user.yaw, user.pitch)
-//            val targetWorld : ServerWorld = if (world == Dimensions.DIM1) {
-//                Dimensions.OVERWORLD
-//            } else {
-//                Dimensions.DIM1
-//            }
-//            FabricDimensions.teleport(user, targetWorld, teleportTarget)
-//        }
 
         user!!.sendMessage(Text.of("Current alignment: ${world.alignment()}"), true)
 

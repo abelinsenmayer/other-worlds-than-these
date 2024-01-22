@@ -3,6 +3,7 @@ package abe.owtt.dimension
 import abe.owtt.component.COSMIC_ALIGNMENT
 import net.minecraft.world.World
 import abe.owtt.OtherWorldsThanThese.LOGGER
+import kotlin.math.abs
 import kotlin.random.Random
 
 const val OVERWORLD_CHANGE_RATE = 2
@@ -28,4 +29,8 @@ fun getAlignmentChangeRate(world : World): Int {
 
 fun World.alignment(): Int {
     return COSMIC_ALIGNMENT.get(this).value
+}
+
+fun alignmentDifference(world1: World, world2: World): Int {
+    return abs(world1.alignment() - world2.alignment())
 }

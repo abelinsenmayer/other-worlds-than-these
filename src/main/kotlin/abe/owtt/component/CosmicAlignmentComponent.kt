@@ -1,7 +1,6 @@
 package abe.owtt.component
 
 import abe.owtt.makeLogger
-import dev.onyxstudios.cca.api.v3.component.ComponentRegistryV3
 import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent
 import net.minecraft.nbt.NbtCompound
 
@@ -40,7 +39,7 @@ data class CosmicAlignmentComponent(
      */
     override fun serverTick() {
         if (this.tickCount == TICK_FREQUENCY) {
-            logger.info("TICK! Alignment is now ${this.value}")
+            logger.trace("Ticking alignment. World alignment is now ${this.value}")
             if (this.value < MAX_ALIGNMENT) {
                 this.value += changeRate
             } else if(this.value > MIN_ALIGNMENT) {
